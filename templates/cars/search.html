@@ -1,0 +1,18 @@
+<h1>Поиск машин</h1>
+
+<form action="/cars/search" method="get">
+    <input type="text" name="car_name" placeholder="Введите название машины">
+    <button type="submit">Поиск</button>
+</form>
+
+<br>
+
+<a href="/cars/new">Добавить машину</a>
+
+<h2>Список машин</h2>
+
+<ul>
+{% for car in cars %}
+<li>{{ car.name }} - {{ car.year }}</li>
+{% endfor %}
+</ul>
